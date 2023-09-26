@@ -8,3 +8,18 @@ react-icon{
   width: 1.5rem;
   height: 1.5rem; */
 }
+
+@layer utilities {
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+  .scrollbar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  .icon:focus{
+      background-color: rgba(0, 0, 0, 0.05);
+      font-weight: 500;
+  }
+}

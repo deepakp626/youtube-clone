@@ -1,12 +1,11 @@
-import NavBar from "./components/NavBar"
+import DashBoardLayout from "./components/DashBoardLayout"
+
 
 function App() {
   return (
     <>
-    <div className="max-w-full border-2 border-red-500">
-
-    <NavBar />
-   
+    <div className=" ">
+          <DashBoardLayout />
     </div>
     </>
   )

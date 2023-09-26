@@ -1,21 +1,26 @@
 import { FaBars } from "react-icons/fa"
 import { GoSearch } from "react-icons/go"
-import { BsThreeDotsVertical } from "react-icons/bs"
-import { BsFillPersonFill } from 'react-icons/bs'
-import { BiSolidMicrophone } from 'react-icons/bi'
-import logo from "/logo/Frame.png"
+// import { BsThreeDotsVertical } from "react-icons/bs"
+// import { BsFillPersonFill } from 'react-icons/bs'
+// import { BiSolidMicrophone } from 'react-icons/bi'
+import logo from "/logo/Frame.svg"
 import Avatar from 'react-avatar';
 import signIn from "/SignIn/SVG.svg"
+import useDisclosure from "../hook/useDisclosure";
+import Mike from './Mike'
+
 function NavBar() {
+  const {isOpen,toggle} = useDisclosure()
+
 
   return (
     <>
       <nav className="px-4 py-2  bg-white flex justify-between items-center w-full">
-        <div className="flex gap-4 border-2 border-blue-600">
-          <FaBars className="react-icon w-[1.5rem] h-[1.5rem] cursor-pointer" />
+        <div className="flex gap-4 ">
+          <FaBars  onClick={toggle}  className="react-icon w-[1.5rem] h-[1.5rem] cursor-pointer" />
           <img className="w-[5.6rem] " src={logo} />
         </div>
-        <div className="border-2 border-red-500  ">
+        <div className=" ">
 
           {/* <div className="border-2 border-blue-600 flex  items-center gap-[0.5rem]  ">
             <div>
@@ -27,16 +32,14 @@ function NavBar() {
             </div>
 
 
-            <div className="rounded-[1.25rem] bg-[#D3D3D3] p-[0.5rem]">
-              <BiSolidMicrophone className="w-[2rem] h-[2rem] " />
-            </div>
+          <Mike />
 
           </div> */}
 
           <GoSearch className="react-icon w-[1.5rem] h-[1.5rem] cursor-pointer" />
 
         </div>
-        <div className="flex items-center gap-3 text-[0.875rem] border-2 border-orange-700 ">
+        <div className="flex items-center gap-3 text-[0.875rem] ">
           {/* <BsThreeDotsVertical className="react-icon w-[1.5rem] h-[1.5rem] cursor-pointer" /> */}
           <button className="px-[0.5rem] py-[0.5rem]  text-[#065FD4] border-2  rounded-[1.125rem] ">
             <Avatar size="30" round={true} src={signIn} />   Sign in</button>
