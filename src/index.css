@@ -13,6 +13,14 @@ react-icon{
   *{
     margin: 0px;
     padding: 0px;
+    box-sizing :border-box;
+  }
+  input::placeholder{
+    color: rgb(78, 67, 67);
+  }
+  input{
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.05);
   }
   .scrollbar::-webkit-scrollbar {
     width: 0px;
@@ -21,5 +29,19 @@ react-icon{
   .icon:focus{
       background-color: rgba(0, 0, 0, 0.05);
       font-weight: 500;
+  }
+  .icon{
+    font-size:0.875rem ;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  button{
+    padding: 0.38rem 1.06rem;
+    border-radius: 1.125rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 0.875rem;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
   }
 }

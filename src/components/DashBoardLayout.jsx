@@ -1,7 +1,9 @@
-import HomeLayout from "../pages/HomePage/HomeLayout"
+// import HomeLayout from "../pages/HomePage/HomeLayout"
+import PlayVideoLayout from "../pages/VideoPlay/PlayVideoLayout"
 // import SearchPageLayout from "../pages/SearchPage/SearchPageLayout"
 // import PropTypes from 'prop-types';
 import NavBar from "./NavBar"
+// import PhoneSearchBar from "./PhoneSearchBar"
 
 const DashBoardLayout = () => {
   return (
@@ -9,8 +11,10 @@ const DashBoardLayout = () => {
       <div>
         <NavBar />
         <div className="  ">
-              <HomeLayout/>
+              {/* <HomeLayout/> */}
               {/* <SearchPageLayout /> */}
+              {/* <PhoneSearchBar /> */}
+              <PlayVideoLayout />
         </div>
       </div>
     </>
@@ -19,7 +23,5 @@ const DashBoardLayout = () => {
 
 export default DashBoardLayout
 
-// DashBoardLayout.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
+
 

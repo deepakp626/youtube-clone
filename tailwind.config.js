@@ -5,17 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // screens: {
-    //   'tablet': '425px',
-    //   // => @media (min-width: 640px) { ... }
-
-    //   'laptop': '1024px',
-    //   // => @media (min-width: 1024px) { ... }
-
-    //   'desktop': '1280px',
-    //   // => @media (min-width: 1280px) { ... }
-    // },
     extend: {
+      screens:{
+          "xs":'425px'
+      },
+      colors: {
+        'regal-blue': '#243c5a',
+        "p":"#606060",
+        "backGround":"#0000000d"
+      },
       scrollbar: {
         '.scrollbar': {
               backgroundColor:'#0F172A',    

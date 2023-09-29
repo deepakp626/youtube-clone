@@ -11,7 +11,6 @@ const VideoCmp = () => {
             </div>
             <div className="">
               <h2 className="text-base font-medium border-2 h-[3.5rem] overflow-hidden text-ellipsis">Jean-Claude Van Damme |Lionheart (Action) Full Length… Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, unde!</h2>
-
               <div className="text-[0.875rem] text-[#606060] font-normal">
                 <p >Best Documentary</p>
                 <p>2.8M views  3 months ago</p>

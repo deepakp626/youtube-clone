@@ -9,19 +9,6 @@ const SearchPageLayout = () => {
       </div>
       <div className="flex flex-col gap-4 overflow-scroll sm:px-5  pb-6">
           <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
-          <SearchVideoCmp />
       </div>
     </>
   )

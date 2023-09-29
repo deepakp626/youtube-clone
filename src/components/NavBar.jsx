@@ -10,7 +10,7 @@ import useDisclosure from "../hook/useDisclosure";
 import Mike from './Mike'
 
 function NavBar() {
-  const {isOpen,toggle} = useDisclosure()
+  const {toggle} = useDisclosure()
 
 
   return (
@@ -22,21 +22,21 @@ function NavBar() {
         </div>
         <div className=" ">
 
-          {/* <div className="border-2 border-blue-600 flex  items-center gap-[0.5rem]  ">
+          <div className="hidden sm:flex   gap-[0.5rem]  ">
             <div>
               <div className="border-2 flex  items-center rounded-2xl border-[#D3D3D3] overflow-hidden  max-w-[23rem] ">
                 <input className="outline-none py-[0.44rem] px-[1.06rem]"
                   type="search" placeholder="Search" />
-                <GoSearch className="text-2xl mr-5" />
+                <GoSearch className="text-2xl mr-3 ml-3" />
               </div>
             </div>
 
 
           <Mike />
 
-          </div> */}
+          </div>
 
-          <GoSearch className="react-icon w-[1.5rem] h-[1.5rem] cursor-pointer" />
+          <GoSearch className=" sm:hidden react-icon w-[1.5rem] h-[1.5rem] cursor-pointer" />
 
         </div>
         <div className="flex items-center gap-3 text-[0.875rem] ">
