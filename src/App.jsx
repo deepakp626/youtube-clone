@@ -11,10 +11,10 @@ function App() {
     <>
     <div className=" ">
       <Routes>
-          <Route path="/" element={<HomeLayout />}  />
+          <Route path="/" exact  element={<HomeLayout />}  />
           <Route path="/search" element={<SearchPageLayout />}  />
           <Route path="/phonesearchbar" element={<PhoneSearchBar />}  />
-          <Route path="/videoplay" element={<PlayVideoLayout />}  />
+          <Route path="/watch/:id" element={<PlayVideoLayout />}  />
           <Route path="/shorts" element={<ShortsLayout />}  />
       </Routes>
     </div>

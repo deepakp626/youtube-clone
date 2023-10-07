@@ -10,11 +10,11 @@ const DashBoardLayout = ({children}) => {
     <>
       <div>
         <NavBar />
-        <div className="flex border-2 border-blue-700 ">
-          <div className="border-2 border-orange-500 w-16">
+        <div className="flex ">
+          <div className="w-16 hidden  sm:flex">
             <MIniSideNav />
           </div>
-          <div className="  overflow-scroll scrollbar  border-4 border-red-500 w-full  justify-self-start">
+          <div className="  overflow-scroll scrollbar   w-full  justify-self-start">
                {children}      
           </div>
         </div>

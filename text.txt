@@ -1,1 +1,14 @@
  max-w-[19rem]
+
+  // useEffect(()=>{
+  //    fetch('https://www.googleapis.com/youtube/v3/videos?',{
+  //       ket:'AIzaSyDJLf7pldjvf6QevVF_Baz0SrcX0InveMI',
+  //       part:'snippet',
+  //       chart:'mostPopular',
+  //       maxResults:1,
+  //       regionCode:'IN'
+  //    }).then(res => res.json())
+  //    .then(data => {
+  //       // console.log(data)
+  //    },[])
+  // })
