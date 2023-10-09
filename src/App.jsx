@@ -15,7 +15,7 @@ function App() {
           <Route path="/search" element={<SearchPageLayout />}  />
           <Route path="/phonesearchbar" element={<PhoneSearchBar />}  />
           <Route path="/watch/:id" element={<PlayVideoLayout />}  />
-          <Route path="/shorts" element={<ShortsLayout />}  />
+          <Route path="/shorts/:id" element={<ShortsLayout />}  />
       </Routes>
     </div>
     </>

@@ -10,6 +10,7 @@ import useDisclosure from "../hook/useDisclosure";
 import Mike from "./Mike";
 import { setSearch } from "../features/youtubeSlice";
 import {useDispatch} from 'react-redux'
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const dispatch = useDispatch()
@@ -47,7 +48,9 @@ function NavBar() {
             <Mike />
           </div>
 
+          <Link to="/phonesearchbar">
           <GoSearch className=" sm:hidden react-icon w-[1.5rem] h-[1.5rem] cursor-pointer" />
+          </Link>
         </div>
         <div className="flex items-center gap-3 text-[0.875rem] ">
           {/* <BsThreeDotsVertical className="react-icon w-[1.5rem] h-[1.5rem] cursor-pointer" /> */}

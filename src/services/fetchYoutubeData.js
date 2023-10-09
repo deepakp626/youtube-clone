@@ -13,45 +13,64 @@ export const youtubeApi = createApi({
         url: "videos",
         method: "GET",
         params: {
-          key:youtubeApiKey,
+          key: youtubeApiKey,
           part: "snippet",
           maxResults: 4,
           chart: "mostPopular",
           regionCode: "IN",
-        }
+        },
       }),
       // 'videos?key=AIzaSyDJLf7pldjvf6QevVF_Baz0SrcX0InveMI&part=snippet&chart=mostPopular&regionCode=IN'
     }),
-    
 
-    videoInfoById:builder.query({
-      query:(id)=>({
-        url:`videos`,
-        params:{
-          id:id,
+    videoInfoById: builder.query({
+      query: (id) => ({
+        url: `videos`,
+        params: {
+          id: id,
           regionCode: "IN",
-          key:youtubeApiKey,
+          key: youtubeApiKey,
           part: "snippet",
-        }
-      })
+        },
+      }),
     }),
 
-    searchVideos:builder.query({
-       query:(searchItem)=>({
-        url:"search",
-        method:"GET",
-        params:{
-          key:youtubeApiKey,
+    searchVideos: builder.query({
+      query: (searchItem) => ({
+        url: "search",
+        method: "GET",
+        params: {
+          key: youtubeApiKey,
           part: "snippet",
-          q:searchItem,
-          regionCode:"IN",
-          videoType:"any",
-          maxResults:4
-        }
-       })
+          q: searchItem,
+          regionCode: "IN",
+          videoType: "any",
+          maxResults: 20,
+        },
+      }),
     }),
 
+    shortsVideo: builder.query({
+      query: (id) => {
+        console.log({ id });
+        return {
+          url: "videos",
+          params: {
+            key: youtubeApiKey,
+            videoDuration: "short",
+            regionCode: "IN",
+            chart: "mostPopular",
+            maxResults: 1,
+          },
+        };
+      },
+    }),
   }),
 });
 
-export const { useGetAllDataQuery, useSearchVideosQuery ,useVideoInfoByIdQuery} = youtubeApi;
+export const {
+  useGetAllDataQuery,
+  useSearchVideosQuery,
+  useVideoInfoByIdQuery,
+  useShortsVideoQuery,
+} = youtubeApi;
