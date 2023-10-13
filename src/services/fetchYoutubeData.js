@@ -69,7 +69,7 @@ export const youtubeApi = createApi({
 
     shortsVideo: builder.query({
       query: (id) => {
-        console.log({ id });
+        // console.log({ id });
         return {
           url: "videos",
           params: {

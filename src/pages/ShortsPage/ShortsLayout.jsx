@@ -7,7 +7,7 @@ const ShortsLayout = () => {
  const {id} = useParams()
 //  console.log(id)
   const res  = useShortsVideoQuery(id)
-  console.log(res)
+  // console.log(res)
 
   if(res.isLoading){
     return <div>Loading ...</div>;

@@ -13,9 +13,9 @@ const SuggestionVideo = () => {
   // console.log(data)
 
   const watchHandler = (id, categoryId) => {
-    console.log("video id", id);
+    // console.log("video id", id);
     navigate(`/watch/${id.videoId}`);
-    console.log("debug");
+    // console.log("debug");
     dispatch(setCategory(categoryId));
   };
 

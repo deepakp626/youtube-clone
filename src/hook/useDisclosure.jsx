@@ -13,7 +13,7 @@ const useDisclosure = () => {
 
   const toggle = () => {
     setIsOpen((prevState) => !prevState);
-    console.log({isOpen})
+    // console.log({isOpen})
   };
 
   return {

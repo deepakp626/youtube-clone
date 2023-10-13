@@ -15,7 +15,7 @@ export const youtubeSlice = createSlice({
       state.suggestVideoTitle = action.payload;
     },
     setSearch: (state, action) => {
-      console.log(action.payload)
+      // console.log(action.payload)
       state.searchData = action.payload;
     },
     toggleSideNav: (state) => {

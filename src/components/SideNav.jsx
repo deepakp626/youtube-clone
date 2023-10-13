@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const SideNav = () => {
   const { sideNav_toggled } = useSelector((state) => state.youtube);
-  console.log({ sideNav_toggled });
+  // console.log({ sideNav_toggled });
   // const watch = [
   //   {
   //     text: "Home",

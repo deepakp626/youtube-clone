@@ -29,12 +29,12 @@ const LogInSignIn = () => {
           type="icon"
           shape="circle"
           onSuccess={(credentialResponse) => {
-            console.log(credentialResponse);
+            // console.log(credentialResponse);
             const { credential } = credentialResponse;
             dispatch(setToken(credential));
           }}
           onError={() => {
-            console.log("Login Failed");
+            // console.log("Login Failed");
           }}
         />
       </div>

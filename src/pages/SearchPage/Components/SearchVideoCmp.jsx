@@ -12,7 +12,7 @@ const SearchVideoCmp = () => {
   // console.log(data);
 
   const videoPlayHandler = (id) => {
-    console.log(id);
+    // console.log(id);
     navigate(`/watch/${id}`);
   };
 
