@@ -2,23 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-
-react-icon{
+react-icon {
   /* padding: 0.5rem;
   width: 1.5rem;
   height: 1.5rem; */
 }
 
 @layer utilities {
-  *{
+  .sideNav-button {
+    @apply flex items-center justify-start  gap-6  px-[0.75rem] py-[0.5rem]   w-48 rounded-xl;
+  }
+
+  * {
     margin: 0px;
     padding: 0px;
-    box-sizing :border-box;
+    box-sizing: border-box;
   }
-  input::placeholder{
+  input::placeholder {
     color: rgb(78, 67, 67);
   }
-  input{
+  input {
     outline: none;
     background-color: rgba(0, 0, 0, 0.05);
   }
@@ -26,22 +29,14 @@ react-icon{
     width: 0px;
     height: 0px;
   }
-  .icon:focus{
-      background-color: rgba(0, 0, 0, 0.05);
-      font-weight: 500;
+
+  .sideNav-button:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-weight: 500;
   }
-  .icon{
-    font-size:0.875rem ;
+  .icon {
+    font-size: 0.875rem;
     width: 1.5rem;
     height: 1.5rem;
-  }
-  button{
-    padding: 0.38rem 1.06rem;
-    border-radius: 1.125rem;
-    background-color: rgba(0, 0, 0, 0.05);
-    font-size: 0.875rem;
-    display: flex;
-    justify-items: center;
-    justify-content: center;
   }
 }

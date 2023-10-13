@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  currentVideoCategory: null,
+  suggestVideoTitle: null,
   searchData: "bharat",
+  sideNav_toggled: false,
+  token: localStorage.getItem("token") ? localStorage.getItem("token") : null,
 };
 
 export const youtubeSlice = createSlice({
@@ -10,15 +12,24 @@ export const youtubeSlice = createSlice({
   initialState,
   reducers: {
     setCategory: (state, action) => {
-      state.currentVideoCategory = action.payload;
+      state.suggestVideoTitle = action.payload;
     },
     setSearch: (state, action) => {
-       state.searchData = action.payload;
-    }
+      console.log(action.payload)
+      state.searchData = action.payload;
+    },
+    toggleSideNav: (state) => {
+      state.sideNav_toggled = !state.sideNav_toggled;
+    },
+    setToken: (state, action) => {
+      state.token = action.payload;
+      localStorage.setItem("token",action.payload)
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setCategory ,setSearch} = youtubeSlice.actions;
+export const { setCategory, setSearch, toggleSideNav, setToken } =
+  youtubeSlice.actions;
 
 export default youtubeSlice.reducer;

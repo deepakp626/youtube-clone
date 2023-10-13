@@ -2,7 +2,7 @@ import Avatar from 'react-avatar'
 import {BiLike,BiDislike} from 'react-icons/bi'
 import {FaShare} from 'react-icons/fa'
 const VideoInfo = ({data}) => {
-  console.log({data})
+  // console.log({data})
   return (
     <>
          <div>
@@ -11,7 +11,8 @@ const VideoInfo = ({data}) => {
             </h2>
             <div className='sm:flex py-[0.5rem]'>
                <div className='flex items-center '>
-                  <Avatar size='4rem' className='rounded-full mr-4'  />
+                  <Avatar name={data.items[0].snippet.title}
+                  size='4rem' className='rounded-full mr-4'  />
                   <div>
                       <h2 className='font-medium'>{data.items[0].snippet.channelTitle}</h2>
                       {/* <p className='text-[0.75rem] font-normal text-p'>17.9M subscribers</p> */}

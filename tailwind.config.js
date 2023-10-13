@@ -21,6 +21,15 @@ export default {
       },
     },
   },
+  animation: {
+    'sideNav': 'side 3s linear infinite',
+  },
+  keyframes: {
+    side: {
+      '0% ': { width: '0px' },
+      '100%': { width: '240px' },
+    }
+  },
   plugins: [],
 }
 

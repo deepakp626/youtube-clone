@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+// import { import } from 'meta'
 
-const youtubeApiKey = "AIzaSyDJLf7pldjvf6QevVF_Baz0SrcX0InveMI";
+const youtubeApiKey = import.meta.env.VITE_API_YOUTUBE_API_KEY;
 
 export const youtubeApi = createApi({
   reducerPath: "youtubeApi",
@@ -15,7 +16,7 @@ export const youtubeApi = createApi({
         params: {
           key: youtubeApiKey,
           part: "snippet",
-          maxResults: 4,
+          maxResults: 50,
           chart: "mostPopular",
           regionCode: "IN",
         },
@@ -35,6 +36,22 @@ export const youtubeApi = createApi({
       }),
     }),
 
+    fetchSuggestionVideo: builder.query({
+       query: (suggestVideoTitle) => ({
+        url:'search',
+        method:"GET",
+        params:{
+          key: youtubeApiKey,
+          part: "snippet",
+          q: suggestVideoTitle,
+          type:"video",
+          maxResults:15,
+          chart:"mostPopular",
+          regionCode:"IN",
+        }
+       })
+    }),
+
     searchVideos: builder.query({
       query: (searchItem) => ({
         url: "search",
@@ -45,7 +62,7 @@ export const youtubeApi = createApi({
           q: searchItem,
           regionCode: "IN",
           videoType: "any",
-          maxResults: 20,
+          maxResults: 25,
         },
       }),
     }),
@@ -73,4 +90,5 @@ export const {
   useSearchVideosQuery,
   useVideoInfoByIdQuery,
   useShortsVideoQuery,
+  useFetchSuggestionVideoQuery
 } = youtubeApi;

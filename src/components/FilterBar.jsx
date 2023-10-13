@@ -1,3 +1,4 @@
+
 const FilterBar = () => {
   const allFilter = [
     {
@@ -69,13 +70,16 @@ const FilterBar = () => {
       path: "/"
     },
   ]
+
+  
   return (
     <>
          <div
           className="scrollbar space-x-[0.74rem] py-3  flex overflow-x-scroll pl-4">
           {
             allFilter.map((item, id) => (
-              <button key={id} className="px-[0.75rem] py-[0.38rem] text-[0.875rem] bg-[#0000000d] rounded-lg focus:bg-black focus:text-white">
+              <button 
+              key={id} className="px-[0.75rem] py-[0.38rem] text-[0.875rem] bg-[#0000000d] rounded-lg focus:bg-black focus:text-white">
                 {item.text}
               </button>
             ))
